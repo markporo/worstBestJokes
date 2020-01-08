@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daily Journal</title>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head> -->
+
+<%- include("partials/header.ejs"); -%>
+
+<style>
+    button {
+        width: 20%;
+        height: 60px;
+        float: right;
+        margin-top: -40px;
+
+         
+    }
+
+    .coolLi a {
+        color: black;
+        list-style-type: none;
+    }
+
+    .coolLi {
+        display: block;
+        color: black;
+        list-style-type: none;
+        padding-bottom: 10px;
+    }
+
+
+    .flex-column {
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+#postLabel {
+    border: 1px solid #6D757D;
+    padding: 10px; 
+    border-radius: 10%;
+    background-color: transparent;
+
+}
+
+    .input-group-text {
+        background-color: transparent;
+        border: 1px solid #6D757D;
+    border-radius: 20%;
+    }
+
+.form-control {
+    border: 1px solid #6D757D;
+    
+}
+
+</style>
+
+<body>
+    <div>
+
+        <h1>ADD A JOKE</h1>
+
+        <form method="POST" action="/compose" method="POST">
+            <!-- <h3>Title:</h3> -->
+            <!-- <input type="text" name="postName"> -->
+
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Title:</span>
+                </div>
+                <input type="text" name="postName" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+
+
+            <br>
+            <br>
+            <!-- <h3>Post:</h3> -->
+            <div class="form-group">
+                <label id="postLabel" for="exampleFormControlTextarea1">Post:</label>
+                <textarea class="form-control" name="postBody" id="exampleFormControlTextarea1" rows="6"></textarea>
+              </div>
+            <br>
+            <br>
+            <!-- <button type="button" class="btn btn-light">Light</button> -->
+            <button type="submit" class="btn btn-outline-secondary">Publish</button>
+        </form>
+    </div>
+    <div class="footer-padding" style="height: 40px">
+
+    </div>
+    <%- include("partials/footer.ejs"); -%>

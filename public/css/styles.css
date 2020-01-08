@@ -1,0 +1,153 @@
+body {
+    background-color: #f1eee7;
+    color: #263f44;
+    width: 100vw;
+    
+}
+/* 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  } */
+
+
+
+/* .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+} */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav  li a {
+    color:  #ffd369;
+    padding: 5px 0;
+}
+
+
+
+.navbar-nav  li a:hover {
+    color:   #f1eee7 !important;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #015668;
+    color: #ffd369;
+   
+}
+
+/* #navContainer {
+    padding-bottom: -60px;
+} */
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.jokePost-Container {
+    overflow: none;
+    display: block;
+    padding-bottom: 90px; 
+    
+}
+
+.fatbaby {
+    width: 25%; 
+    height: 300px;
+}
+
+
+.buttons {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: 45px auto;
+}
+
+.flex-container-center {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px 5px;
+    justify-content: space-evenly;
+}
+
+.flex-container {
+    display: flex;
+   flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-flex-container {
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.container1 {
+    padding-bottom: 60px; 
+}
+
+
+/* .footer-padding {
+    padding-bottom: 50px;
+   
+} */
+
+.footer {
+    padding: 0;
+    margin:0;
+    width: 100%;
+	height: 60px;
+    background-color: #015668;
+    position: absolute;
+    bottom: 0;
+    /* display: flex;
+    justify-content: center; */
+    
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #ffd369;
+  text-align: center;
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+    #ron1 {
+        display: none;
+    }
+
+    .fatbaby {
+        width: 40%; 
+        
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #ron1 {
+        display: none;
+    }
+
+    #ron2 {
+        display: none;
+    }
+
+    .fatbaby {
+        width: 65%; 
+        
+    }
+}

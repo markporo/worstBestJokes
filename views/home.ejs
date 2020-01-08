@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs"); -%>
+
+<h1>HOME</h1>
+
+<!-- <p><%=mainParagraph%></p> -->
+
+<div class="jokePost-Container">
+  <% posts.forEach(function(post) { %>
+  <h3><%=post.blogTitle%></h3>
+  <p>
+    <%=post.blogContent.substring(0, 25) + "..."%>
+    <a href="/posts/<%=post.blogTitle%>"> Read More</a>
+  </p>
+  <% }); %>
+</div>
+
+<%- include("partials/footer.ejs"); -%>

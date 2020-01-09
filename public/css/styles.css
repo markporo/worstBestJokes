@@ -53,6 +53,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+hr {
+    margin-top: -20px;
+}
+
 .jokePost-Container {
     overflow: none;
     display: block;

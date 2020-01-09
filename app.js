@@ -6,10 +6,26 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
-//connection method for mongoose
-mongoose.connect("mongodb://localhost:27017/PostsDB", {
-  useNewUrlParser: true
+//connection method for mongoose --local connection
+// mongoose.connect("mongodb://localhost:27017/PostsDB", {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true,
+//   useFindAndModify: true,
+// });
+
+//mongoDB Atlas Connections
+mongoose.connect("mongodb+srv://admin-mark:terribleJokes123@bestworstjokes-8bddu.mongodb.net/PostsDB", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useFindAndModify: true,
 });
+
+
+// mongoose.connect(process.env.MONGO_URL, {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true,
+//   useFindAndModify: true,
+//   });
 
 // Create Mongoose Schema - a structure/ blueprint for what the document requires before being added to the collection of the PostsDB
 const postSchema = new mongoose.Schema({
@@ -177,11 +193,6 @@ app.post("/compose", function(req, res) {
   });
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-
-app.listen(port, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server has started successfully");
 });
